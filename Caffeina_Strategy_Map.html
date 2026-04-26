@@ -1,0 +1,407 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { font-family: 'Georgia', serif; background-color: #fdfaf5; margin: 0; padding: 20px; color: #3c2a21; }
+        .header { background: #3c2a21; color: #d5cea3; padding: 20px 30px; border-radius: 12px 12px 0 0; border-bottom: 4px solid #d5cea3; display: flex; justify-content: space-between; align-items: center; }
+        .main-layout { display: flex; gap: 20px; height: 85vh; margin-top: 20px; }
+        .left-col { flex: 1.8; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border: 1px solid #e5e5e5; background: white; }
+        .right-col { flex: 1; display: flex; flex-direction: column; gap: 20px; }
+        .card { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #eee; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th { text-align: left; font-size: 11px; text-transform: uppercase; color: #999; padding: 10px; border-bottom: 2px solid #f5f5f5; }
+        td { padding: 12px 10px; border-bottom: 1px solid #f9f9f9; font-size: 13px; }
+        .progress-container { height: 8px; background: #eee; border-radius: 4px; margin: 8px 0 12px 0; overflow: hidden; }
+        .progress-bar { height: 100%; background: #3c2a21; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div>
+            <h1 style="margin:0; font-size: 22px; letter-spacing: 1px;">☕ CAFFEINA STRATEGY PORTAL</h1>
+            <p style="margin:2px 0 0 0; font-size: 11px; opacity: 0.8; font-family: sans-serif;">Treasure Valley Expansion Analysis — BUS 450</p>
+        </div>
+        <div style="background:#d5cea3; color:#3c2a21; padding: 6px 15px; border-radius: 20px; font-weight: bold; font-size: 11px; font-family: sans-serif;">STRICTLY CONFIDENTIAL</div>
+    </div>
+
+    <div class="main-layout">
+        <div class="left-col"><div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><span style="color:#565656">Make this Notebook Trusted to load map: File -> Trust Notebook</span><iframe srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    
+    &lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://code.jquery.com/jquery-3.7.1.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css&quot;/&gt;
+    
+            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
+            &lt;style&gt;
+                #map_5fb358ca758997f542210d8e899ad074 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            &lt;/style&gt;
+
+            &lt;style&gt;html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            &lt;/style&gt;
+
+            &lt;style&gt;#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            &lt;/style&gt;
+
+            &lt;script&gt;
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            &lt;/script&gt;
+
+        
+    &lt;script src=&quot;https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+    
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_5fb358ca758997f542210d8e899ad074&quot; &gt;&lt;/div&gt;
+        
+&lt;/body&gt;
+&lt;script&gt;
+    
+    
+            var map_5fb358ca758997f542210d8e899ad074 = L.map(
+                &quot;map_5fb358ca758997f542210d8e899ad074&quot;,
+                {
+                    center: [43.615, -116.35],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  &quot;zoom&quot;: 11,
+  &quot;zoomControl&quot;: true,
+  &quot;preferCanvas&quot;: false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_4f402c7ba953096e55caad66ccbba3c8 = L.tileLayer(
+                &quot;https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png&quot;,
+                {
+  &quot;minZoom&quot;: 0,
+  &quot;maxZoom&quot;: 20,
+  &quot;maxNativeZoom&quot;: 20,
+  &quot;noWrap&quot;: false,
+  &quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\&quot;https://carto.com/attributions\&quot;\u003eCARTO\u003c/a\u003e&quot;,
+  &quot;subdomains&quot;: &quot;abcd&quot;,
+  &quot;detectRetina&quot;: false,
+  &quot;tms&quot;: false,
+  &quot;opacity&quot;: 1,
+}
+
+            );
+        
+    
+            tile_layer_4f402c7ba953096e55caad66ccbba3c8.addTo(map_5fb358ca758997f542210d8e899ad074);
+        
+    
+            var heat_map_be7bc63af0d414f11740020e7dceb2fc = L.heatLayer(
+                [[43.601, -116.425, 9.5], [43.665, -116.354, 9.0], [43.664, -116.4, 8.0], [43.555, -116.559, 8.5], [43.491, -116.42, 4.0]],
+                {
+  &quot;minOpacity&quot;: 0.5,
+  &quot;maxZoom&quot;: 18,
+  &quot;radius&quot;: 25,
+  &quot;blur&quot;: 15,
+}
+            );
+        
+    
+            heat_map_be7bc63af0d414f11740020e7dceb2fc.addTo(map_5fb358ca758997f542210d8e899ad074);
+        
+    
+            var marker_c86d6cdcaca2247055fcf55260dac72c = L.marker(
+                [43.601, -116.425],
+                {
+}
+            ).addTo(map_5fb358ca758997f542210d8e899ad074);
+        
+    
+            var icon_24d99068c8f38e20ec5834c5f628b288 = L.AwesomeMarkers.icon(
+                {
+  &quot;markerColor&quot;: &quot;green&quot;,
+  &quot;iconColor&quot;: &quot;white&quot;,
+  &quot;icon&quot;: &quot;coffee&quot;,
+  &quot;prefix&quot;: &quot;fa&quot;,
+  &quot;extraClasses&quot;: &quot;fa-rotate-0&quot;,
+}
+            );
+        
+    
+        var popup_48760b6b533b9a1be43b7187136e6fce = L.popup({
+  &quot;maxWidth&quot;: 250,
+});
+
+        
+            
+                var html_38d8d50178cb800f7d98ef6aeed5c638 = $(`&lt;div id=&quot;html_38d8d50178cb800f7d98ef6aeed5c638&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;     &lt;div style=&quot;font-family: &#x27;Helvetica&#x27;, sans-serif; width: 220px; padding: 5px;&quot;&gt;         &lt;h4 style=&quot;margin: 0 0 5px 0; color: #3c2a21;&quot;&gt;Ten Mile / Meridian&lt;/h4&gt;         &lt;div style=&quot;font-size: 13px; font-weight: bold; color: #2e7d32; margin-bottom: 8px;&quot;&gt;             Strong (94 pts)         &lt;/div&gt;         &lt;div style=&quot;font-size: 12px; line-height: 1.6;&quot;&gt;             &lt;b&gt;Income:&lt;/b&gt; $113,750&lt;br&gt;             &lt;b&gt;Traffic:&lt;/b&gt; 9.5/10&lt;br&gt;             &lt;b&gt;Competition Gap:&lt;/b&gt; 8/10&lt;br&gt;             &lt;hr style=&quot;border: 0; border-top: 1px solid #eee; margin: 8px 0;&quot;&gt;             &lt;p style=&quot;font-size: 11px; color: #555; margin: 0;&quot;&gt;Tier 1: Gold Zone. tract 102.26. Premier demographic buffer.&lt;/p&gt;         &lt;/div&gt;     &lt;/div&gt;     &lt;/div&gt;`)[0];
+                popup_48760b6b533b9a1be43b7187136e6fce.setContent(html_38d8d50178cb800f7d98ef6aeed5c638);
+            
+        
+
+        marker_c86d6cdcaca2247055fcf55260dac72c.bindPopup(popup_48760b6b533b9a1be43b7187136e6fce)
+        ;
+
+        
+    
+    
+            marker_c86d6cdcaca2247055fcf55260dac72c.bindTooltip(
+                `&lt;div&gt;
+                     Strategy DNA: Ten Mile / Meridian
+                 &lt;/div&gt;`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+                marker_c86d6cdcaca2247055fcf55260dac72c.setIcon(icon_24d99068c8f38e20ec5834c5f628b288);
+            
+    
+            var marker_51bb870392404f960546ca49e65fe9dc = L.marker(
+                [43.665, -116.354],
+                {
+}
+            ).addTo(map_5fb358ca758997f542210d8e899ad074);
+        
+    
+            var icon_77029402b84dfac12190172294c049b9 = L.AwesomeMarkers.icon(
+                {
+  &quot;markerColor&quot;: &quot;green&quot;,
+  &quot;iconColor&quot;: &quot;white&quot;,
+  &quot;icon&quot;: &quot;coffee&quot;,
+  &quot;prefix&quot;: &quot;fa&quot;,
+  &quot;extraClasses&quot;: &quot;fa-rotate-0&quot;,
+}
+            );
+        
+    
+        var popup_8ec7f069facc9940533c234478344cad = L.popup({
+  &quot;maxWidth&quot;: 250,
+});
+
+        
+            
+                var html_b84cd749026d679fd647502fbd51d430 = $(`&lt;div id=&quot;html_b84cd749026d679fd647502fbd51d430&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;     &lt;div style=&quot;font-family: &#x27;Helvetica&#x27;, sans-serif; width: 220px; padding: 5px;&quot;&gt;         &lt;h4 style=&quot;margin: 0 0 5px 0; color: #3c2a21;&quot;&gt;Boise / Chinden Blvd&lt;/h4&gt;         &lt;div style=&quot;font-size: 13px; font-weight: bold; color: #2e7d32; margin-bottom: 8px;&quot;&gt;             Strong (83 pts)         &lt;/div&gt;         &lt;div style=&quot;font-size: 12px; line-height: 1.6;&quot;&gt;             &lt;b&gt;Income:&lt;/b&gt; $91,502&lt;br&gt;             &lt;b&gt;Traffic:&lt;/b&gt; 9.0/10&lt;br&gt;             &lt;b&gt;Competition Gap:&lt;/b&gt; 7/10&lt;br&gt;             &lt;hr style=&quot;border: 0; border-top: 1px solid #eee; margin: 8px 0;&quot;&gt;             &lt;p style=&quot;font-size: 11px; color: #555; margin: 0;&quot;&gt;Tier 1: Prime Zone. High Return Flow and worker density.&lt;/p&gt;         &lt;/div&gt;     &lt;/div&gt;     &lt;/div&gt;`)[0];
+                popup_8ec7f069facc9940533c234478344cad.setContent(html_b84cd749026d679fd647502fbd51d430);
+            
+        
+
+        marker_51bb870392404f960546ca49e65fe9dc.bindPopup(popup_8ec7f069facc9940533c234478344cad)
+        ;
+
+        
+    
+    
+            marker_51bb870392404f960546ca49e65fe9dc.bindTooltip(
+                `&lt;div&gt;
+                     Strategy DNA: Boise / Chinden Blvd
+                 &lt;/div&gt;`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+                marker_51bb870392404f960546ca49e65fe9dc.setIcon(icon_77029402b84dfac12190172294c049b9);
+            
+    
+            var marker_8a1ee664ffb24cc4a32e556c49f635d6 = L.marker(
+                [43.664, -116.4],
+                {
+}
+            ).addTo(map_5fb358ca758997f542210d8e899ad074);
+        
+    
+            var icon_51a958671af7bfbb9c80b58064e3981d = L.AwesomeMarkers.icon(
+                {
+  &quot;markerColor&quot;: &quot;orange&quot;,
+  &quot;iconColor&quot;: &quot;white&quot;,
+  &quot;icon&quot;: &quot;coffee&quot;,
+  &quot;prefix&quot;: &quot;fa&quot;,
+  &quot;extraClasses&quot;: &quot;fa-rotate-0&quot;,
+}
+            );
+        
+    
+        var popup_c67b6d1860e2186291e1ddbc9667b925 = L.popup({
+  &quot;maxWidth&quot;: 250,
+});
+
+        
+            
+                var html_efd7b48c68594fa61a3aee05f1344c1b = $(`&lt;div id=&quot;html_efd7b48c68594fa61a3aee05f1344c1b&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;     &lt;div style=&quot;font-family: &#x27;Helvetica&#x27;, sans-serif; width: 220px; padding: 5px;&quot;&gt;         &lt;h4 style=&quot;margin: 0 0 5px 0; color: #3c2a21;&quot;&gt;Eagle / Chinden&lt;/h4&gt;         &lt;div style=&quot;font-size: 13px; font-weight: bold; color: #d97706; margin-bottom: 8px;&quot;&gt;             Moderate (76 pts)         &lt;/div&gt;         &lt;div style=&quot;font-size: 12px; line-height: 1.6;&quot;&gt;             &lt;b&gt;Income:&lt;/b&gt; $82,537&lt;br&gt;             &lt;b&gt;Traffic:&lt;/b&gt; 8.0/10&lt;br&gt;             &lt;b&gt;Competition Gap:&lt;/b&gt; 4/10&lt;br&gt;             &lt;hr style=&quot;border: 0; border-top: 1px solid #eee; margin: 8px 0;&quot;&gt;             &lt;p style=&quot;font-size: 11px; color: #555; margin: 0;&quot;&gt;Tier 2: Growth Zone. New Dutch Bros permitted at Eagle/44.&lt;/p&gt;         &lt;/div&gt;     &lt;/div&gt;     &lt;/div&gt;`)[0];
+                popup_c67b6d1860e2186291e1ddbc9667b925.setContent(html_efd7b48c68594fa61a3aee05f1344c1b);
+            
+        
+
+        marker_8a1ee664ffb24cc4a32e556c49f635d6.bindPopup(popup_c67b6d1860e2186291e1ddbc9667b925)
+        ;
+
+        
+    
+    
+            marker_8a1ee664ffb24cc4a32e556c49f635d6.bindTooltip(
+                `&lt;div&gt;
+                     Strategy DNA: Eagle / Chinden
+                 &lt;/div&gt;`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+                marker_8a1ee664ffb24cc4a32e556c49f635d6.setIcon(icon_51a958671af7bfbb9c80b58064e3981d);
+            
+    
+            var marker_b71f9c1ff607e23c2c21dcf3f1c323d3 = L.marker(
+                [43.555, -116.559],
+                {
+}
+            ).addTo(map_5fb358ca758997f542210d8e899ad074);
+        
+    
+            var icon_033d4bb506e51e4b455712789b573a55 = L.AwesomeMarkers.icon(
+                {
+  &quot;markerColor&quot;: &quot;orange&quot;,
+  &quot;iconColor&quot;: &quot;white&quot;,
+  &quot;icon&quot;: &quot;coffee&quot;,
+  &quot;prefix&quot;: &quot;fa&quot;,
+  &quot;extraClasses&quot;: &quot;fa-rotate-0&quot;,
+}
+            );
+        
+    
+        var popup_b65d5b534eceee1c5024c1bbdf486ddc = L.popup({
+  &quot;maxWidth&quot;: 250,
+});
+
+        
+            
+                var html_a17af95b24fb34e58b14896963810501 = $(`&lt;div id=&quot;html_a17af95b24fb34e58b14896963810501&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;     &lt;div style=&quot;font-family: &#x27;Helvetica&#x27;, sans-serif; width: 220px; padding: 5px;&quot;&gt;         &lt;h4 style=&quot;margin: 0 0 5px 0; color: #3c2a21;&quot;&gt;Nampa / 12th Ave&lt;/h4&gt;         &lt;div style=&quot;font-size: 13px; font-weight: bold; color: #d97706; margin-bottom: 8px;&quot;&gt;             Moderate (64 pts)         &lt;/div&gt;         &lt;div style=&quot;font-size: 12px; line-height: 1.6;&quot;&gt;             &lt;b&gt;Income:&lt;/b&gt; $68,500&lt;br&gt;             &lt;b&gt;Traffic:&lt;/b&gt; 8.5/10&lt;br&gt;             &lt;b&gt;Competition Gap:&lt;/b&gt; 6/10&lt;br&gt;             &lt;hr style=&quot;border: 0; border-top: 1px solid #eee; margin: 8px 0;&quot;&gt;             &lt;p style=&quot;font-size: 11px; color: #555; margin: 0;&quot;&gt;Tier 3: Volume Zone. High traffic, but lower income buffer.&lt;/p&gt;         &lt;/div&gt;     &lt;/div&gt;     &lt;/div&gt;`)[0];
+                popup_b65d5b534eceee1c5024c1bbdf486ddc.setContent(html_a17af95b24fb34e58b14896963810501);
+            
+        
+
+        marker_b71f9c1ff607e23c2c21dcf3f1c323d3.bindPopup(popup_b65d5b534eceee1c5024c1bbdf486ddc)
+        ;
+
+        
+    
+    
+            marker_b71f9c1ff607e23c2c21dcf3f1c323d3.bindTooltip(
+                `&lt;div&gt;
+                     Strategy DNA: Nampa / 12th Ave
+                 &lt;/div&gt;`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+                marker_b71f9c1ff607e23c2c21dcf3f1c323d3.setIcon(icon_033d4bb506e51e4b455712789b573a55);
+            
+    
+            var marker_5c498948cc8927ea8a3960ed6ecadcc6 = L.marker(
+                [43.491, -116.42],
+                {
+}
+            ).addTo(map_5fb358ca758997f542210d8e899ad074);
+        
+    
+            var icon_e97b4a3cc3584a65313ff3c8913659ff = L.AwesomeMarkers.icon(
+                {
+  &quot;markerColor&quot;: &quot;red&quot;,
+  &quot;iconColor&quot;: &quot;white&quot;,
+  &quot;icon&quot;: &quot;coffee&quot;,
+  &quot;prefix&quot;: &quot;fa&quot;,
+  &quot;extraClasses&quot;: &quot;fa-rotate-0&quot;,
+}
+            );
+        
+    
+        var popup_3fa250b9eaf4129c3c005442d5a7d575 = L.popup({
+  &quot;maxWidth&quot;: 250,
+});
+
+        
+            
+                var html_4ad8972af1e6f04675feccb37228e4b0 = $(`&lt;div id=&quot;html_4ad8972af1e6f04675feccb37228e4b0&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;     &lt;div style=&quot;font-family: &#x27;Helvetica&#x27;, sans-serif; width: 220px; padding: 5px;&quot;&gt;         &lt;h4 style=&quot;margin: 0 0 5px 0; color: #3c2a21;&quot;&gt;West Kuna&lt;/h4&gt;         &lt;div style=&quot;font-size: 13px; font-weight: bold; color: #991b1b; margin-bottom: 8px;&quot;&gt;             Weak (44 pts)         &lt;/div&gt;         &lt;div style=&quot;font-size: 12px; line-height: 1.6;&quot;&gt;             &lt;b&gt;Income:&lt;/b&gt; $58,000&lt;br&gt;             &lt;b&gt;Traffic:&lt;/b&gt; 4.0/10&lt;br&gt;             &lt;b&gt;Competition Gap:&lt;/b&gt; 9/10&lt;br&gt;             &lt;hr style=&quot;border: 0; border-top: 1px solid #eee; margin: 8px 0;&quot;&gt;             &lt;p style=&quot;font-size: 11px; color: #555; margin: 0;&quot;&gt;Void Zone: Insufficient traffic density for Tier 1 model.&lt;/p&gt;         &lt;/div&gt;     &lt;/div&gt;     &lt;/div&gt;`)[0];
+                popup_3fa250b9eaf4129c3c005442d5a7d575.setContent(html_4ad8972af1e6f04675feccb37228e4b0);
+            
+        
+
+        marker_5c498948cc8927ea8a3960ed6ecadcc6.bindPopup(popup_3fa250b9eaf4129c3c005442d5a7d575)
+        ;
+
+        
+    
+    
+            marker_5c498948cc8927ea8a3960ed6ecadcc6.bindTooltip(
+                `&lt;div&gt;
+                     Strategy DNA: West Kuna
+                 &lt;/div&gt;`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+                marker_5c498948cc8927ea8a3960ed6ecadcc6.setIcon(icon_e97b4a3cc3584a65313ff3c8913659ff);
+            
+&lt;/script&gt;
+&lt;/html&gt;" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div></div>
+        <div class="right-col">
+            <div class="card">
+                <h3 style="margin:0; font-family: sans-serif;">Site Rankings</h3>
+                <table>
+                    <thead><tr><th>Location</th><th>Score</th><th>Status</th></tr></thead>
+                    <tbody><tr><td>Ten Mile / Meridian</td><td style='color:green; font-weight:bold;'>94</td><td>Strong</td></tr><tr><td>Boise / Chinden Blvd</td><td style='color:green; font-weight:bold;'>83</td><td>Strong</td></tr><tr><td>Eagle / Chinden</td><td style='color:orange; font-weight:bold;'>76</td><td>Moderate</td></tr><tr><td>Nampa / 12th Ave</td><td style='color:orange; font-weight:bold;'>64</td><td>Moderate</td></tr><tr><td>West Kuna</td><td style='color:red; font-weight:bold;'>44</td><td>Weak</td></tr></tbody>
+                </table>
+            </div>
+            <div class="card">
+                <h4 style="margin:0 0 15px 0; font-family: sans-serif;">Aggregate Market DNA</h4>
+                <div style="font-size:12px; display:flex; justify-content:space-between;"><span>Mean Income Factor</span><b>22/25</b></div>
+                <div class="progress-container"><div class="progress-bar" style="width: 88%;"></div></div>
+                <div style="font-size:12px; display:flex; justify-content:space-between;"><span>Mean Commuter Flow</span><b>23/25</b></div>
+                <div class="progress-container"><div class="progress-bar" style="width: 92%;"></div></div>
+            </div>
+            <div style="background: #fff5f5; border: 1px solid #feb2b2; color: #9b2c2c; padding: 15px; border-radius: 12px; font-size: 12px;">
+                <b>🚨 Strategic Alert:</b><br>
+                Dutch Bros encroachment near Hwy 44 identified. Eagle/Chinden Tier 2 viability under active review.
+            </div>
+        </div>
+    </div>
+</body>
+</html>
